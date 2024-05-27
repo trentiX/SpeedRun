@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IhaveFeeling.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable/Coke.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable/Lamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable/Piano.cs" root0="FORCE_HIGHLIGHTING" />
@@ -21,7 +21,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SecTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trampoline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnitySourceMovement-master/UnitySourceMovement-master/Modified fragsurf/CameraWaterCheck.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnitySourceMovement-master/UnitySourceMovement-master/Modified fragsurf/Ladder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnitySourceMovement-master/UnitySourceMovement-master/Modified fragsurf/Movement/SurfCharacter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,7 +109,7 @@
       <workItem from="1716753022943" duration="2306000" />
       <workItem from="1716795458258" duration="3498000" />
       <workItem from="1716827000601" duration="15049000" />
-      <workItem from="1716843674291" duration="3647000" />
+      <workItem from="1716843674291" duration="3970000" />
     </task>
     <servers />
   </component>

@@ -9,12 +9,14 @@ public class StartAnim : MonoBehaviour
 {
     public TextMeshProUGUI startText;
     public GameObject menuCanvas;
+    public GameObject gameCanvas;
     public PlayerAiming cameraHolder;
     public SurfCharacter surfCharacter;
     public GameObject sleep;
 
     private void Start()
     {
+        gameCanvas.SetActive(false);
         sleep.SetActive(false);
         menuCanvas.SetActive(true);
         startText.enabled = true;
@@ -43,6 +45,7 @@ public class StartAnim : MonoBehaviour
     private void StartGame()
     {
         StopCoroutine(anim());
+        gameCanvas.SetActive(true);
         cameraHolder.enabled = true;
         surfCharacter.enabled = true;
         menuCanvas.SetActive(false);
