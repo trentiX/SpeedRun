@@ -8,6 +8,10 @@ public class Timer : MonoBehaviour
 {
     private float elapsedTime = 0f; // Прошедшее время
     public TextMeshProUGUI timerText; // UI Text для отображения времени
+    public TextMeshProUGUI recordText;
+    private bool isTiming = false; // Флаг для отслеживания состояния таймера
+    private bool timerStarted = false;
+    private float record = 1000f;
 
     void Start()
     {
@@ -16,8 +20,11 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        UpdateTimerText();
+        if (isTiming)
+        {
+            elapsedTime += Time.deltaTime;
+            UpdateTimerText();
+        }
     }
 
     void UpdateTimerText()
@@ -27,5 +34,37 @@ public class Timer : MonoBehaviour
         int tenths = Mathf.FloorToInt((elapsedTime * 10) % 10);
 
         timerText.text = string.Format("{0:00}:{1:00}.{2:0}", minutes, seconds, tenths);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) // Убедитесь, что у объекта-триггера есть тег "Player"
+        {
+            if (timerStarted)
+            {
+                newRecord();
+                timerStarted = false;
+                isTiming = false;
+            }
+            else
+            {
+                timerStarted = true;
+                isTiming = true;
+                elapsedTime = 0f; // Сброс времени, если необходимо
+            }
+        }
+    }
+
+    private void newRecord()
+    {
+        if (elapsedTime < record)
+        {
+            int minutes = Mathf.FloorToInt(elapsedTime / 60);
+            int seconds = Mathf.FloorToInt(elapsedTime % 60);
+            int tenths = Mathf.FloorToInt((elapsedTime * 10) % 10);
+
+            recordText.text = "RECORD: " + string.Format("{0:00}:{1:00}.{2:0}", minutes, seconds, tenths);
+            record = elapsedTime;
+        }
     }
 }
