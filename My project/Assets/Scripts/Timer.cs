@@ -6,11 +6,13 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private float elapsedTime = 0f; // Прошедшее время
+    public float elapsedTime = 0f; // Прошедшее время
     public TextMeshProUGUI timerText; // UI Text для отображения времени
     public TextMeshProUGUI recordText;
-    private bool isTiming = false; // Флаг для отслеживания состояния таймера
-    private bool timerStarted = false;
+    public TextMeshProUGUI finalTimerText;
+    
+    public bool isTiming = false; // Флаг для отслеживания состояния таймера
+    public bool timerStarted = false;
     private float record = 1000f;
 
     void Start()
@@ -34,6 +36,7 @@ public class Timer : MonoBehaviour
         int tenths = Mathf.FloorToInt((elapsedTime * 10) % 10);
 
         timerText.text = string.Format("{0:00}:{1:00}.{2:0}", minutes, seconds, tenths);
+        finalTimerText.text = "YOUR TIME: " + string.Format("{0:00}:{1:00}.{2:0}", minutes, seconds, tenths);
     }
 
     void OnTriggerEnter(Collider other)
@@ -55,7 +58,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    private void newRecord()
+    public void newRecord()
     {
         if (elapsedTime < record)
         {

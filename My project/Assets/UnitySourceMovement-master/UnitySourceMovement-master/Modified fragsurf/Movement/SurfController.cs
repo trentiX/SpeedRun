@@ -519,7 +519,7 @@ namespace Fragsurf.Movement {
         /// </summary>
         /// <param name="velocity"></param>
         /// <param name="jumpPower"></param>
-        private void Jump () {
+        public void Jump () {
             
             if (!_config.autoBhop)
                 _surfer.moveData.wishJump = false;
